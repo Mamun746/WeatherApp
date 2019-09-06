@@ -1,3 +1,71 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed&display=swap");
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
 body {
-  background: #854ca5;
+  background: #400066;
+}
+
+.input-data {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+
+  .input {
+    margin: 5px;
+    input[type="text"] {
+      font-size: 20px;
+      flex-shrink: 1;
+      color: #f4f4f4;
+      padding: 0px 7px;
+      border: none;
+      background: #400066;
+      border-bottom: 1px solid #f67731;
+    }
+  }
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 8px 20px;
+  margin-top: 20px;
+  background: #f67731;
+  margin-left: 6px;
+  cursor: pointer;
+  color: #f4f4f4;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.main-data {
+  display: flex;
+  justify-content: center;
+
+  color: #f4f4f4;
+}
+
+// Min&max temp
+
+.max {
+  font-size: 20px;
+}
+.min {
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 15px;
+  li {
+    padding: 10px;
+    border-bottom: 1px solid #f67731;
+    width: 450px;
+    text-transform: capitalize;
+  }
 }
