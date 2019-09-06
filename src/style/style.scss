@@ -69,3 +69,21 @@ ul {
     text-transform: capitalize;
   }
 }
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 700px) {
+  .input-data {
+    display: block;
+    text-align: center;
+  }
+  ul {
+    li {
+      padding: 10px;
+      border-bottom: 1px solid #f67731;
+      width: 350px;
+      text-transform: capitalize;
+    }
+  }
+}
