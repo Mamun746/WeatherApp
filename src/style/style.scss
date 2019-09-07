@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Roboto+Condensed&display=swap");
 @import "variables";
 
+// Utilities
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  color: #cbccce;
 }
 
 body {
   background: #400066;
+  width: 100%;
+  max-height: 100vh;
 }
 
+// Input city and country
 .input-data {
   display: flex;
   justify-content: center;
@@ -21,33 +26,32 @@ body {
     margin: 5px;
     input[type="text"] {
       font-size: 20px;
-      flex-shrink: 1;
-      color: #f4f4f4;
+      color: #cbccce;
       padding: 0px 7px;
       border: none;
       background: #400066;
-      border-bottom: 1px solid #f67731;
+      border-bottom: 2px solid #008ff8;
     }
   }
 }
 
+// Submit Button
 input[type="submit"] {
   border: none;
   padding: 8px 20px;
-  margin-top: 20px;
-  background: #f67731;
+  margin-top: 10px;
+  background: #008ff8;
   margin-left: 6px;
   cursor: pointer;
-  color: #f4f4f4;
-  font-size: 15px;
+  color: #cbccce;
+  font-size: 20px;
   border-radius: 4px;
 }
 
 .main-data {
   display: flex;
   justify-content: center;
-
-  color: #f4f4f4;
+  color: #cbccce;
 }
 
 // Min&max temp
@@ -59,31 +63,73 @@ input[type="submit"] {
   font-size: 20px;
 }
 
+// List style
 ul {
   list-style: none;
   margin-top: 15px;
   li {
     padding: 10px;
-    border-bottom: 1px solid #f67731;
-    width: 450px;
+    border-bottom: 1px solid #008ff8;
+    width: 500px;
     text-transform: capitalize;
   }
 }
 
-@media only screen and (max-width: 600px) {
+.list {
+  display: flex;
+  justify-content: center;
+  color: #fff;
 }
 
-@media only screen and (max-width: 700px) {
+// Temp style
+.minHighTemp {
+  margin-left: -35px;
+  padding-top: 10px;
+}
+.description {
+  padding-top: 20px;
+  margin-left: -50px;
+  text-transform: capitalize;
+}
+
+// Add media query
+@media only screen and (max-width: 630px) {
+  input[type="submit"] {
+    margin-left: 80px;
+  }
+  .temperature {
+    margin-left: 50px;
+  }
+  img {
+    margin-left: 50px;
+  }
+  .minHighTemp {
+    margin-left: 20px;
+  }
+  .description {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  input[type="text"] {
+    width: 80%;
+  }
   .input-data {
     display: block;
     text-align: center;
   }
   ul {
     li {
-      padding: 10px;
-      border-bottom: 1px solid #f67731;
-      width: 350px;
+      justify-content: flex-start;
+      width: 100%;
       text-transform: capitalize;
     }
+  }
+  .input {
+    padding-bottom: 10px;
+  }
+  input[type="submit"] {
+    margin-right: 100px;
   }
 }
